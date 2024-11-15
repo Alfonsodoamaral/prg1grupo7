@@ -42,23 +42,22 @@ background-color: beige;
 
 }
 
-
 #detalle-receta {
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-
-#detalle-receta main{
+    height: 100vh;
     display: flex;
-    justify-content: space-around;
-}
-
-#detalle-receta img{
-    width: 40%;
-}
-
-#detalle-receta div{
-    width: 40%;
-}
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    
+    #detalle-receta main{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #detalle-receta img{
+        width: 40%;
+    }
+    
+    #detalle-receta div{
+        width: 40%;
+    }
