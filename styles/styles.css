@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    
+  }
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li {
+    margin-left: 15px;
+    padding: 15px;
+}
+
+#logo{
+    width: 100px;
+    
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+a{
+    text-decoration: none;
+    color: rgb(97, 33, 33);
+}
+a:hover{
+    color:rgba(128, 128, 128, 0.5)
+}
+footer{
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: beige;
+
+}
