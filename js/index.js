@@ -19,7 +19,7 @@ fetch('https://dummyjson.com/recipes')
                     <div>
                         <h3>${recipes[i].name}</h3>
                         <p>Dificultad: ${recipes[i].difficulty}</p>
-                        <a href="./detalle-receta?id=${recipes[i].id}">Ir al detalle</a>
+                        <a href="./detalle-receta.html?id=${recipes[i].id}">Ir al detalle</a>
                     </div>
                 </article>`;
     }
