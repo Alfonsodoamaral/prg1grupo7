@@ -41,6 +41,30 @@ align-items: center;
 background-color: beige;
 
 }
+
+.receta {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    align-items: flex-start;
+    background-color: lightgray;
+    border-radius: 20px;
+    margin-bottom: 40px;
+
+}
+
+.receta img {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.receta div {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
 #detalle-receta {
     height: 100vh;
     display: flex;
