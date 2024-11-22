@@ -39,3 +39,4 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     .catch(function(error) {
         console.error("Error encontrando la receta:", error);
     })
+
