@@ -1,5 +1,4 @@
 document.querySelector("h1").innerText = 'hola';
-
 let section = document.querySelector("#recetas-home");
 
 fetch('https://dummyjson.com/recipes')
