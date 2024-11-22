@@ -72,16 +72,16 @@ background-color: beige;
     justify-content: space-between;
     }
     
-    #detalle-receta main{
-        display: flex;
-        justify-content: space-around;
-    }
+#detalle-receta main{
+    display: flex;
+    justify-content: space-around;
+}
     
-    #detalle-receta img{
-        width: 40%;
-    }
+#detalle-receta img{
+    width: 40%;
+}
     
-    #detalle-receta div{
-        width: 40%;
-    }
+#detalle-receta div{
+    width: 40%;
+}
 

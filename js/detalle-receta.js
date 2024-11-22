@@ -5,7 +5,7 @@ console.log(id);
 
 let main = document.querySelector("#detalle-receta main");
 
-fetch(`https://dummyjson.com/recipes/${id}`)
+fetch (`https://dummyjson.com/recipes/${id}`)
     .then(function(response) {
         return response.json();
     })
@@ -14,11 +14,10 @@ fetch(`https://dummyjson.com/recipes/${id}`)
 
         let instrucciones = '';
         for (let i = 0; i < result.instructions.length; i++) {
-            instrucciones += `<li>${result.instructions[i]}</li>`;
+            instrucciones += <li>${result.instructions[i]}</li>;
         }
-
-        main.innerHTML = `
-        <img src="${result.image}" alt="">
+        main.innerHTML =  `
+        <img src=${result.image} alt="">
         <div>
             <h1>${result.name}</h1>
             <p>${result.cookTimeMinutes}</p>
@@ -34,9 +33,9 @@ fetch(`https://dummyjson.com/recipes/${id}`)
             <h3>Dificultad</h3>
             <p>Fácil</p>
         </div>
-        `;
+        `
+        
     })
     .catch(function(error) {
         console.error("Error encontrando la receta:", error);
-    })
-
+    }) 
