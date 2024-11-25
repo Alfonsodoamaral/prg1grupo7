@@ -51,7 +51,7 @@ boton.addEventListener("click", function () {
 
 
             for (let i = 0; i < 10; i++) {
-                section.innerHTML +=
+                section.innerHTML +=`
 
 
                     <article>
@@ -60,7 +60,7 @@ boton.addEventListener("click", function () {
                         <p>${data.recipes[i].difficulty}</p>
                         <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
                     </article>
-            }
+            `}
         })
 })
 
