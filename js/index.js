@@ -6,8 +6,7 @@ fetch('https://dummyjson.com/recipes')
     let recipes = result.recipes; 
     let recipeContent = ""; 
     let section = document.querySelector("#recetas-home");
-
-
+    
     section.style.display = "flex";
     section.style.flexWrap = "wrap";
     section.style.justifyContent = "space-evenly";

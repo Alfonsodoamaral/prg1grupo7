@@ -14,6 +14,8 @@ fetch(`https://dummyjson.com/recipes/${id}`)
         let instrucciones = '';
         for (let i = 0; i < result.instructions.length; i++) {
             instrucciones += <li>${result.instructions[i]}</li>;
+            let button = document.querySelector("#detalle-receta main"); 
+            button.addEventListener("click", fetchRecipe);
         }
         main.innerHTML = `
         <img src=${result.image} alt="">
@@ -38,3 +40,4 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     .catch(function (error) {
         console.error("Error encontrando la receta:", error);
     }) 
+
