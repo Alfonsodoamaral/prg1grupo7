@@ -50,7 +50,7 @@ boton.addEventListener("click", function () {
             console.log(data);
 
 
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < data.recipes.length; i++) {
                 section.innerHTML +=`
 
 
