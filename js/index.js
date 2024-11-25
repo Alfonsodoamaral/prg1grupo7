@@ -30,3 +30,38 @@ fetch('https://dummyjson.com/recipes')
   .catch(function(error) {
     console.log("Error: ", error); 
   });
+
+
+  let boton = document.querySelector("#cargar")
+
+
+ let pagina = 0
+
+
+ boton.addEventListener("click", function(){
+   pagina+=10;
+
+
+   fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
+   .then(function(res){
+     return res.json()
+   })
+   .then(function(data){
+     console.log(data);
+
+
+     for (let i = 0; i < 10; i++) {
+       section.innerHTML +=
+
+
+       <article>
+         <img src= "${data.recipes[i].image}" alt=""> </img>
+         <h3> ${data.recipes[i].name}</h3>
+         <p>${data.recipes[i].difficulty}</p>
+         <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
+         </article>
+     }
+   })
+ })
+
+
