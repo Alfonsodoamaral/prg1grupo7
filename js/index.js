@@ -51,15 +51,14 @@ boton.addEventListener("click", function () {
 
 
             for (let i = 0; i < 10; i++) {
-                section.innerHTML +=
-
-
+                section.innerHTML += `
                     <article>
-                        <img src="${data.recipes[i].image}" alt=""> </img>
-                        <h3> ${data.recipes[i].name}</h3>
+                        <img src="${data.recipes[i].image}" alt="">
+                        <h3>${data.recipes[i].name}</h3>
                         <p>${data.recipes[i].difficulty}</p>
-                        <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
+                        <a href="detalle-receta.html?id=${data.recipes[i].id}">Ver receta</a>
                     </article>
+                `;
             }
         })
 })
