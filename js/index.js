@@ -1,31 +1,12 @@
-fetch('https://dummyjson.com/recipes')
+let section = document.querySelector("#home section");
+fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
   .then(function(res) {
     return res.json();
   })
-  .then(function(result) {
-    let recipes = result.recipes; 
-    let recipeContent = ""; 
-    let section = document.querySelector("#recetas-home");
-    
-    section.style.display = "flex";
-    section.style.flexWrap = "wrap";
-    section.style.justifyContent = "space-evenly";
-    
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (result) {
-        let recipes = result.recipes;
-        let recipeContent = "";
-        let section = document.querySelector("#recetas-home");
-
-
-        section.style.display = "flex";
-        section.style.flexWrap = "wrap";
-        section.style.justifyContent = "space-evenly";
-
-        for (let i = 0; i < 10; i++) {
-            recipeContent += `
+  .then(function(data){
+    console.log(data);
+    for (let i = 0; i < 10; i++) {  
+            RTCSessionDescription.innerHTML += `
                 <article class="receta">
                     <img src="${recipes[i].image}" alt="">
                     <div>
@@ -35,43 +16,28 @@ fetch('https://dummyjson.com/recipes')
                     </div>
                 </article>`;
         }
-
-        console.log(recipeContent);
-        section.innerHTML = recipeContent;
-    })
-    .catch(function (error) {
-        console.log("Error: ", error);
-    });
-
-
-let boton = document.querySelector("#cargar")
-
-
-let pagina = 0
-
-
-boton.addEventListener("click", function () {
-    pagina += 10;
-
-
-    fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
-        .then(function (res) {
-            return res.json()
+    let boton = document.querySelector("#cargar") 
+    let pagina = 0
+    
+    boton.addEventListener("click", function (){
+        console.log(pagina)
+        pagina += 10
+        console.log(pagina)
+        fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
+            .then(function(res){
+                return res.json();
         })
-        .then(function (data) {
+        .then(function(data){
             console.log(data);
-
-
-            for (let i = 0; i < 10; i++) {
-                section.innerHTML +=
-
-
+            
+            for (let i = 0; i < data.recipes.length; i++) {
+                section.innerHTML +=`
                     <article>
-                        <img src="${data.recipes[i].image}" alt=""> </img>
-                        <h3> ${data.recipes[i].name}</h3>
+                        <img src="${data.recipes[i].image}" alt=""> 
+                        <h3>${data.recipes[i].name}</h3>
                         <p>${data.recipes[i].difficulty}</p>
                         <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
                     </article>
+                `;
             }
-        })
-})
+        }) 
