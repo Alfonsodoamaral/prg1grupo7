@@ -28,19 +28,24 @@ fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
         fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
             .then(function(res){
                 return res.json()
-        })
-        .then(function(data){
-            console.log(data);
-    
-            for (let i = 0; i < data.recipes.length; i++) {
-                section.innerHTML +=`
-                    <article>
-                        <img src="${data.recipes[i].image}" alt=""> 
-                        <h3>${data.recipes[i].name}</h3>
-                        <p>${data.recipes[i].difficulty}</p>
-                        <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
-                    </article>
-        `;
-            }
-        })
-}) 
+            })
+            .then(function (data) {
+                console.log(data);
+                for (let i = 0; i < data.recipes.length; i++) {
+                    section.innerHTML += `
+                        <article class="receta">
+                            <img src="${data.recipes[i].image}" alt="">
+                            <div>
+                                <h3>${data.recipes[i].name}</h3>
+                                <p>Dificultad: ${data.recipes[i].difficulty}</p>
+                                <a href="./detalle-receta.html?id=${data.recipes[i].id}">Ir al detalle</a>
+                            </div>
+                        </article>
+            `;
+                }
+
+            })
+    }) 
+
+
+
