@@ -7,7 +7,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     .then(function (res) {
         return res.json()
     })
-    .then(function (data) {
+    .then(function (data){
         console.log(data);
 
         let titulo = document.querySelector("#detalle-receta h1")
@@ -22,7 +22,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
 
         let instrucciones = document.querySelector("#detalle-receta ol")
         for(let i = 0; i < data.instructions.length; i++) {
-            instrucciones.innerHTML += <li>${data.instructions[i]}</li>
+            instrucciones.innerHTML += `<li>${data.instructions[i]}</li>`
 
         }
         

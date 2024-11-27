@@ -4,10 +4,6 @@ let id = queryStringObj.get(`id`)
 console.log(id);
 
 
-
-
-
-
 fetch(`https://dummyjson.com/recipes/tag/${id}`)
 .then(function(res){
    return res.json()
