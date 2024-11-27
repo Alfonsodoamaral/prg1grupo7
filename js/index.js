@@ -1,12 +1,12 @@
 let section = document.querySelector("#home section");
 fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
-  .then(function(res) {
-    return res.json();
+    .then(function(res) {
+        return res.json();
   })
   .then(function(data){
     console.log(data);
     for (let i = 0; i < 10; i++) {  
-            RTCSessionDescription.innerHTML += `
+            section.innerHTML += `
                 <article class="receta">
                     <img src="${recipes[i].image}" alt="">
                     <div>
@@ -16,20 +16,22 @@ fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
                     </div>
                 </article>`;
         }
+  })
+
     let boton = document.querySelector("#cargar") 
     let pagina = 0
     
-    boton.addEventListener("click", function (){
-        console.log(pagina)
-        pagina += 10
-        console.log(pagina)
+    boton.addEventListener("click", function(){
+        console.log(pagina);
+        pagina += 10;
+        console.log(pagina);
         fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
             .then(function(res){
-                return res.json();
+                return res.json()
         })
         .then(function(data){
             console.log(data);
-            
+    
             for (let i = 0; i < data.recipes.length; i++) {
                 section.innerHTML +=`
                     <article>
@@ -38,6 +40,7 @@ fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
                         <p>${data.recipes[i].difficulty}</p>
                         <a href="detalle-receta-html?id=${data.recipes[i].id}">link</a>
                     </article>
-                `;
+        `;
             }
-        }) 
+        })
+}) 
