@@ -1,6 +1,6 @@
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString)
-let search = queryStringObj.get(`search`)
+let search = queryStringObj.get(`query`)
 console.log(search);
 
 let section = document.querySelector("#search section")
