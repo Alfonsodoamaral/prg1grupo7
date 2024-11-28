@@ -5,7 +5,6 @@ let pagina = 0;
 section.style.display = "flex";
 section.style.flexWrap = "wrap";
 section.style.justifyContent = "space-evenly";
-
 function cargarRecetas() {
     fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
         .then(function (res) {
