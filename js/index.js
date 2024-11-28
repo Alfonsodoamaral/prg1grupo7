@@ -1,7 +1,10 @@
 let section = document.querySelector("#home section");
 let boton = document.querySelector("#cargar");
-let pagina = 0; 
+let pagina = 0;
 
+section.style.display = "flex";
+section.style.flexWrap = "wrap";
+section.style.justifyContent = "space-evenly";
 
 function cargarRecetas() {
     fetch(`https://dummyjson.com/recipes?limit=10&skip=${pagina}`)
@@ -11,7 +14,7 @@ function cargarRecetas() {
         .then(function (data) {
             console.log(data);
 
-          
+
             for (let i = 0; i < data.recipes.length; i++) {
                 section.innerHTML += `
                     <article class="receta">
@@ -35,6 +38,6 @@ cargarRecetas();
 
 
 boton.addEventListener("click", function () {
-    pagina += 10; 
+    pagina += 10;
     cargarRecetas();
 });
