@@ -238,8 +238,8 @@ h1 {
 section {
     display: flex; 
     flex-wrap: wrap; 
+    justify-content: center;
     gap: 20px; 
-    justify-content: space-between; 
     padding: 10px;
 }
 
