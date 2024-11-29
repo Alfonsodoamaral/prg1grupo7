@@ -8,7 +8,6 @@ let h1 = document.querySelector("#search h1")
 
 h1.innerHTML += `Resultados de busqueda para: ${search}`
 
-
 fetch(`https://dummyjson.com/recipes/search?q=${search}`)
     .then(function (res) {
         return res.json()

@@ -7,7 +7,7 @@ fetch(`https://dummyjson.com/recipes/${id}`)
     .then(function (res) {
         return res.json()
     })
-    .then(function (data) {
+    .then(function (data){
         console.log(data);
 
         let titulo = document.querySelector("#detalle-receta h1")
