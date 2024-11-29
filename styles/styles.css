@@ -64,7 +64,9 @@ background-color: beige;
     padding-bottom: 10px;
     margin-top: 5px;
 }
+div.receta a{
 
+}
 #detalle-receta {
     height: 100vh;
     display: flex;
@@ -78,7 +80,13 @@ background-color: beige;
 }
     
 #detalle-receta img{
-    width: 40%;
+    width: 10%;
+}
+#detalle-receta-img{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+
 }
     
 #detalle-receta div{
