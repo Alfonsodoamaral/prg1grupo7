@@ -80,6 +80,15 @@ background-color: beige;
     display: flex;
     justify-content: space-around;
 }
+
+main#detalle-receta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin: 0 ; 
+    align-items: center;
+    justify-content: center;
+}
     
 #detalle-receta img{
     width: 80%;
@@ -132,7 +141,27 @@ header {
     width: 50%; 
     margin: 0; 
     max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding-top: 10px;
+    
 }
+
+.imgArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 28%;
+    align-items: center;
+    background-color: lightgray;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding-top: 10px;
+
+}
+
+
 
 header nav {
     display: flex;
@@ -233,14 +262,6 @@ body {
     background-color: rgb(240, 240, 240)
 }
 
-main {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;
-    
-}
-
 
 .login-form {
     display: flex;
@@ -273,7 +294,29 @@ main {
     margin-top: 10px;
 }
 
- 
+#mainRegistro {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 70vh;
+}
+
+#mainLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    }
+
+section#searchSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
 
 
 form.registro {
@@ -281,6 +324,8 @@ form.registro {
     flex-direction: column;
     gap: 15px; 
     margin: 0 ; 
+    align-items: center;
+    justify-content: center;
 }
 
 form.registro input,
@@ -288,6 +333,10 @@ form.registro label,
 form.registro button {
     width: 100%; 
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 form.registro button {
@@ -297,7 +346,6 @@ form.registro button {
     padding: 10px;
     
 }
-
 
 form.registro a {
     text-align: center;

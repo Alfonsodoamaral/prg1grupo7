@@ -21,10 +21,10 @@ fetch(`https://dummyjson.com/recipes/search?q=${search}`)
             for (let i = 0; i < data.recipes.length; i++) {
                 section.innerHTML +=
                     `
-                <article>
+                <article class="imgArticle">
                     <img src="${data.recipes[i].image}" class= "imagen-resultados" alt="">
                     <h3>${data.recipes[i].name}<?h3>
-                    <p>difficulty:${data.recipes[i].difficulty}</p>
+                    <p>Difficulty:${data.recipes[i].difficulty}</p>
                     <a href="detalle-receta.html?id=${data.recipes[i].id}">Link</a>
                 </article>
             
