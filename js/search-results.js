@@ -3,7 +3,7 @@ let queryStringObj = new URLSearchParams(queryString)
 let search = queryStringObj.get(`query`)
 console.log(search);
 
-let section = document.querySelector("#search section")
+let section = document.querySelector("#searchSection")
 let h1 = document.querySelector("#search h1")
 
 h1.innerHTML += `Resultados de busqueda para: ${search}`
@@ -22,7 +22,7 @@ fetch(`https://dummyjson.com/recipes/search?q=${search}`)
                 section.innerHTML +=
                     `
                 <article>
-                    <img src="${data.recipes[i].image}" alt="">
+                    <img src="${data.recipes[i].image}" class= "imagen-resultados" alt="">
                     <h3>${data.recipes[i].name}<?h3>
                     <p>difficulty:${data.recipes[i].difficulty}</p>
                     <a href="detalle-receta.html?id=${data.recipes[i].id}">Link</a>
