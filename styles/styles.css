@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
     
   }
 
@@ -26,12 +27,13 @@ ul {
 }
 
 a{
-    text-decoration: none;
     color: rgb(97, 33, 33);
 }
+
 a:hover{
     color:rgba(128, 128, 128, 0.5)
 }
+
 footer{
 display: flex;
 justify-content: space-around;
@@ -100,7 +102,6 @@ div.receta a{
   }
   
   #cargar {
-    margin-top: auto; 
     padding: 12px 24px; 
     font-size: 16px; 
     background-color: rgb(131, 120, 120); 
@@ -127,36 +128,6 @@ header {
 header img {
     width: 150px; 
     margin: 0; 
-}
-
-form.registro {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; 
-    margin: 0 ; 
-}
-
-form.registro input,
-form.registro label,
-form.registro button {
-    width: 100%; 
-    font-size: 20px;
-}
-
-form.registro button {
-    background-color: rgb(76, 175, 80); 
-    color: rgba(255, 255, 255, 1); 
-    border-radius: 5px;
-    padding: 10px;
-    
-}
-
-
-form.registro a {
-    text-align: center;
-    text-decoration: none;
-    color: rgb(76, 175, 80); 
-    font-size: 14px;
 }
 
 
@@ -270,36 +241,66 @@ main {
 
 .login-form {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    width: 100%;           
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+    width: 100%;
 }
+
 .login-form label {
     width: 100%;
     margin-bottom: 5px;
-    text-align: left; 
+    text-align: left;
 }
 
 .login-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px;
     border-radius: 4px;
+}
+
+
+.login-form button {
+    background-color: rgb(76, 175, 80); 
+    color: rgba(255, 255, 255, 1); 
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+ 
+
+
+form.registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin: 0 ; 
+}
+
+form.registro input,
+form.registro label,
+form.registro button {
+    width: 100%; 
+    font-size: 20px;
+}
+
+form.registro button {
+    background-color: rgb(76, 175, 80); 
+    color: rgba(255, 255, 255, 1); 
+    border-radius: 5px;
+    padding: 10px;
     
 }
 
-.login-form button {
-    background-color: rgb(4, 147, 69);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-top: 10px; 
+
+form.registro a {
+    text-align: center;
+    color: rgb(76, 175, 80); 
+    font-size: 14px;
 }
-
-
 
 footer {
     background-color: beige;
