@@ -162,14 +162,16 @@ header {
     justify-content: center;
     width: 28%;
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
     margin-bottom: 40px;
     border-radius: 20px;
     padding-top: 10px;
 
 }
 
-
+#error {
+    display: none;
+}
 
 header nav {
     display: flex;
