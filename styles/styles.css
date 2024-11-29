@@ -78,11 +78,13 @@ background-color: beige;
 }
     
 #detalle-receta img{
-    width: 80%;
+    width: 8%;
 
 }
-div.receta a{
+div.receta {
     align-items: left;
+    display: flex;
+    flex-wrap: wrap;
 }
 #detalle-receta-img{
     width: 90%;
