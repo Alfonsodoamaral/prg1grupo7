@@ -36,4 +36,5 @@ registro.addEventListener("submit", function (e) {
     if (!valido) {
         e.preventDefault();
     }
+    console.log(email);
 });
