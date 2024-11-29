@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro recetas de la nonna</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <form action="search-results.html" method="get">
+            <input type="text" value="" name="query" class="search">
+            <button type="submit">Buscar</button>
+        </form>
+        <img src="https://quizizz.com/media/resource/gs/quizizz-media/quizzes/0e2bd614-ea4d-445d-90fb-247364fb021b?w=400&h=400"
+            alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categorias.html">Categorías</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   
+    <main>
+        <form class="registro">
+            <input type="email" id="email" placeholder="Correo electrónico">
+            <div class="mailError" style="display: none; color: red;">Por favor complete el campo</div>
+        
+            <input type="password" id="password" placeholder="Contraseña">
+            <div class="contraError" style="display: none; color: red;">Por favor complete el campo</div>
+        
+            <label>
+                <input type="checkbox" id="terminosCheckbox"> Acepto los Términos y condiciones
+            </label>
+            <div class="terminosError" style="display: none; color: red;">Debes aceptar los términos y condiciones</div>
+        
+            <button type="submit">Registrarse</button>
+            <a href="login.html">Ya tengo una cuenta</a>
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>Alfonso Do Amaral</p>
+        <p>Franco Mongiat</p>
+        <p>Lucas Eisner</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="./js/validacion.js"></script>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ fetch(`https://dummyjson.com/recipes/search?q=${search}`)
                 <article>
                     <img src="${data.recipes[i].image}" alt="">
                     <h3>${data.recipes[i].name}<?h3>
-                    <p>${data.recipes[i].difficulty}</p>
+                    <p>difficulty:${data.recipes[i].difficulty}</p>
                     <a href="detalle-receta.html?id=${data.recipes[i].id}">Link</a>
                 </article>
             
